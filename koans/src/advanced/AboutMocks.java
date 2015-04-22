@@ -1,6 +1,14 @@
 package advanced;
 
 import com.sandwich.koan.Koan;
+
+import java.lang.*;
+import java.lang.CloneNotSupportedException;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.Throwable;
+
 import static com.sandwich.util.Assert.fail;
 
 public class AboutMocks {
@@ -36,7 +44,12 @@ public class AboutMocks {
 		// HINT: pass a safe Collaborator implementation to constructor
 		// new ClassUnderTest(new Collaborator(){... it should not be the
 		// objective of this test to test that collaborator, so replace it
-		new ClassUnderTest().doSomething();
+		Collaborator c = new Collaborator() {
+			public void doBusinessStuff() {
+				//System.out.println("Safe collaborator passed in and testing is no longer complicated.");
+			}
+		};
+		new ClassUnderTest(c).doSomething();
 	}
 	
 }
