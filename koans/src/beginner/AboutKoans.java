@@ -14,7 +14,8 @@ public class AboutKoans {
 	public void definitionOfKoanCompletion(){
 		boolean koanIsComplete = false;
 		if (!koanIsComplete)
-			System.out.println("koanIsComplete was " + koanIsComplete + '.');
+			//System.out.println("koanIsComplete was " + koanIsComplete + '.');
+            System.out.println();
 	}
 	
 }
